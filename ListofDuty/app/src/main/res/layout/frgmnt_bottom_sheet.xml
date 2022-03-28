@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background_botnav">
+
+    <EditText
+        android:id="@+id/edtextTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxHeight="40dp"
+        android:maxLength="100"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:hint="Masukkan Tugas Baru Disini"
+        android:padding="5dp"
+        android:background="@drawable/background_textholder"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/background_textholder"
+        android:layout_marginTop="10dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <EditText
+                android:id="@+id/edtextDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|top"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:verticalScrollbarPosition="right"
+                android:fadeScrollbars="false"
+                android:maxLength="500"
+                android:textSize="20dp"
+                android:hint="Deskripsi (opsional)"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:inputType="textMultiLine"
+                android:background="@null"/>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="71dp" >
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_textholder">
+
+            <TextView
+                android:id="@+id/textDatePicker"
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|center"
+                android:fontFamily="sans-serif-black"
+                android:padding="12dp"
+                android:gravity="center"
+                android:textColor="#B31B1B"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/btnDatePicker"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center"
+                android:layout_toStartOf="@+id/btnSubmit"
+                android:backgroundTint="#CEB172"
+                android:text="Set Deadline"
+                android:textColor="#CE8372"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                app:backgroundTint="#CEB172" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="7dp"
+            android:backgroundTint="#728FCE"
+            android:gravity="center"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:backgroundTint="#728FCE"
+            app:icon="@drawable/ic_navigation"
+            app:iconGravity="textTop"
+            app:iconSize="40dp"
+            app:iconTint="#CEB172"
+            app:shapeAppearanceOverlay="@style/roundedButton"
+            app:tint="#CEB172" />
+    </RelativeLayout>
+
+
+</LinearLayout>

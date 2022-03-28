@@ -3,13 +3,39 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/background_botnav.xml" value="0.1505" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_check_false.xml" value="0.1505" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_check_true.xml" value="0.1505" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_home1.xml" value="0.1505" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_navigation.xml" value="0.1505" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/slct_home.xml" value="0.1505" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/slct_profile.xml" value="0.1505" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/slct_round_checkbox.xml" value="0.1505" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/activity_main.xml" value="0.11538461538461539" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/frgmnt_home.xml" value="0.11538461538461539" />
+        <entry key="..\:/Users/as/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1675213675213675" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/background_botnav.xml" value="0.1" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/background_textholder.xml" value="0.1" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/frgmnt_bottom_sheet.xml" value="0.1" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_add.xml" value="0.1" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_check_false.xml" value="0.1035" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_check_true.xml" value="0.1035" />
         <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_home.xml" value="0.1075" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_home1.xml" value="0.1" />
         <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/ic_profile.xml" value="0.1" />
         <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/round_corner.xml" value="0.1" />
         <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/slct_home.xml" value="0.1" />
         <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/slct_profile.xml" value="0.1" />
-        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/drawable/slct_round_checkbox.xml" value="0.1035" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/activity_add_task.xml" value="0.1" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/activity_splash_screen.xml" value="0.14" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/cardview_data_task.xml" value="0.42729970326409494" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/frgmnt_bottom_sheet.xml" value="0.1" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/frgmnt_home.xml" value="0.67" />
+        <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/layout/frgmnt_profile.xml" value="0.1" />
         <entry key="..\:/Users/hilma/OneDrive/Documents/Semester 4/AndroStudRepository - Semester 4/ListofDuty/app/src/main/res/menu/bottom_nav_menu.xml" value="0.5" />
       </map>
     </option>
