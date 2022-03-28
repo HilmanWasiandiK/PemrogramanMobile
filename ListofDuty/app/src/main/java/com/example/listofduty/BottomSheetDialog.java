@@ -2,16 +2,17 @@ package com.example.listofduty;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.button.MaterialButton;
@@ -20,24 +21,25 @@ import java.text.DateFormat;
 import java.util.Calendar;
 
 public class BottomSheetDialog extends BottomSheetDialogFragment {
-    Button btnDatePicker;
-    MaterialButton btnAdd;
-    TextView txtTitle, txtDesc, txtDatePicked;
+    Button button_DatePicker;
+    MaterialButton button_Add;
+    TextView text_Title, text_Desc, text_DatePicked;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable
-            ViewGroup container, @Nullable Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setStyle(DialogFragment.STYLE_NO_FRAME, R.style.BottomSheetTheme);
         View v = inflater.inflate(R.layout.frgmnt_bottom_sheet,
                 container, false);
 
-        txtTitle = v.findViewById(R.id.edtextTask);
-        txtDesc = v.findViewById(R.id.edtextDesc);
-        txtDatePicked = v.findViewById(R.id.textDatePicker);
-        btnDatePicker = v.findViewById(R.id.btnDatePicker);
+        text_Title = v.findViewById(R.id.edtextTask);
+        text_Desc = v.findViewById(R.id.edtextDesc);
+        text_DatePicked = v.findViewById(R.id.textDatePicker);
+        button_DatePicker = v.findViewById(R.id.buttonDatePicker);
+        button_Add = v.findViewById(R.id.buttonSubmit);
 
-        btnDatePicker.setOnClickListener(view -> {
+        text_Title.addTextChangedListener(addTaskTextWatcher);
+
+        button_DatePicker.setOnClickListener(view -> {
             Calendar calendar = Calendar.getInstance();
             int year = calendar.get(Calendar.YEAR);
             int month = calendar.get(Calendar.MONTH);
@@ -49,31 +51,42 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
                 calendar1.set(Calendar.DAY_OF_MONTH, day1);
                 String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(calendar1.getTime());
 
-                txtDatePicked.setText(currentDateString);
+                text_DatePicked.setText(currentDateString);
             }, year, month, day);
             datePickerDialog.show();
         });
 
-        btnAdd = v.findViewById(R.id.btnSubmit);
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Model model = new Model(txtTitle.getText().toString(), txtDesc.getText().toString(), txtDatePicked.getText().toString(), false);
+        button_Add.setOnClickListener(view -> {
+            Model model = new Model(text_Title.getText().toString(), text_Desc.getText().toString(), text_DatePicked.getText().toString(), false);
 
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("setDataTask",model);
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("setDataTask",model);
+            getParentFragmentManager().setFragmentResult("getDataTask",bundle);
 
-                getParentFragmentManager().setFragmentResult("getDataTask",bundle);
-
-
-////                navController.navigate(R.id.home_id);
-//                dismiss();
-                HomeFragment homeFragment = new HomeFragment();
-                getParentFragmentManager().beginTransaction().add(homeFragment,"home").commit();
-                dismiss();
-            }
+            HomeFragment homeFragment = new HomeFragment();
+            getParentFragmentManager().beginTransaction().add(homeFragment,"home").commit();
+            dismiss();
         });
         return v;
     }
+
+    private final TextWatcher addTaskTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            String titleTask = text_Title.getText().toString().trim();
+
+            button_Add.setEnabled(!(titleTask.isEmpty()));
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+    };
 }
 

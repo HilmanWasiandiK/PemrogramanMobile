@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/home_id"
+
+    android:id="@+id/layoutHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <TextView
         android:id="@+id/textHello"
         android:layout_width="wrap_content"
@@ -16,7 +17,6 @@
         android:text="Hello,"
         android:textSize="50dp"
         android:fontFamily="cursive"/>
-
     <TextView
         android:id="@+id/textName"
         android:layout_width="wrap_content"
@@ -29,9 +29,8 @@
         android:text="Adolfo"
         android:textSize="30dp"
         android:fontFamily="serif"/>
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recviewListTask"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="120dp"
@@ -39,9 +38,8 @@
         android:layout_marginEnd="20dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/cardview_data_task" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabAddNewTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"

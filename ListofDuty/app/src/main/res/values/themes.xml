@@ -17,7 +17,11 @@
 
     <style name="BottomSheetTheme" parent="Theme.Material3.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/ModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
     </style>
+
 
     <style name="ModalStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/background_botnav</item>

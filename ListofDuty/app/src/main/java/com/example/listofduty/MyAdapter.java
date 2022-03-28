@@ -1,5 +1,6 @@
 package com.example.listofduty;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        @SuppressLint("InflateParams")
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview_data_task, null);
         return new MyHolder(view);
     }

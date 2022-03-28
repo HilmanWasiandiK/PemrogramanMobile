@@ -14,8 +14,8 @@ public class MyHolder extends RecyclerView.ViewHolder {
     public MyHolder(@NonNull View itemView) {
         super(itemView);
 
-        this.mTitle = itemView.findViewById(R.id.textTitleTask);
-        this.mDeadline = itemView.findViewById(R.id.textDeadlineTask);
-        this.checkBox = itemView.findViewById(R.id.cboxtask);
+        this.mTitle = itemView.findViewById(R.id.textTitle);
+        this.mDeadline = itemView.findViewById(R.id.textDeadline);
+        this.checkBox = itemView.findViewById(R.id.cboxTask);
     }
 }

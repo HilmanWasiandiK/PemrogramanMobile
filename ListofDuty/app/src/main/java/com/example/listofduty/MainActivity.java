@@ -6,23 +6,22 @@ import android.os.Bundle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
-    BottomNavigationView navigation;
+    BottomNavigationView botnav_Main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        navigation = findViewById(R.id.bottom_nav);
-        navigation.setItemIconTintList(null);
+        botnav_Main = findViewById(R.id.botnavMain);
+        botnav_Main.setItemIconTintList(null);
 
         openFragment(new HomeFragment());
-        navigation.setOnItemSelectedListener(item -> {
-            if(item.getItemId()==R.id.home) {
+        botnav_Main.setOnItemSelectedListener(item -> {
+            if(item.getItemId()==R.id.itemHome) {
                 openFragment(new HomeFragment());
                 item.setChecked(true);
-            } else if(item.getItemId()==R.id.profile) {
+            } else if(item.getItemId()==R.id.itemProfile) {
                 openFragment(new ProfileFragment());
                 item.setChecked(true);
             }
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     void openFragment(Fragment fragment) {
         if(fragment != null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_content, fragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.layoutBotNav, fragment).commit();
         }
     }
 }

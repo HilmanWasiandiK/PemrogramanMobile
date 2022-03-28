@@ -2,14 +2,14 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/bottom_sheet"
+
+    android:id="@+id/layoutBottomSheet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@drawable/background_botnav">
-
     <EditText
         android:id="@+id/edtextTask"
         android:layout_width="match_parent"
@@ -18,22 +18,19 @@
         android:maxLength="100"
         android:singleLine="true"
         android:scrollHorizontally="true"
-        android:hint="Masukkan Tugas Baru Disini"
-        android:padding="5dp"
+        android:hint="Masukkan Tugas Baru Disini (wajib)"
+        android:padding="10dp"
         android:background="@drawable/background_textholder"
         android:inputType="text" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="@drawable/background_textholder"
         android:layout_marginTop="10dp">
-
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
-
             <EditText
                 android:id="@+id/edtextDesc"
                 android:layout_width="match_parent"
@@ -52,19 +49,15 @@
                 android:background="@null"/>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="71dp" >
-
         <LinearLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
             android:background="@drawable/background_textholder">
-
             <TextView
                 android:id="@+id/textDatePicker"
                 android:layout_width="175dp"
@@ -75,13 +68,12 @@
                 android:gravity="center"
                 android:textColor="#B31B1B"
                 android:textSize="12dp" />
-
             <Button
-                android:id="@+id/btnDatePicker"
+                android:id="@+id/buttonDatePicker"
                 android:layout_width="120dp"
                 android:layout_height="40dp"
                 android:layout_gravity="end|center"
-                android:layout_toStartOf="@+id/btnSubmit"
+                android:layout_toStartOf="@+id/buttonSubmit"
                 android:backgroundTint="#CEB172"
                 android:text="Set Deadline"
                 android:textColor="#CE8372"
@@ -89,9 +81,8 @@
                 android:textStyle="bold"
                 app:backgroundTint="#CEB172" />
         </LinearLayout>
-
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSubmit"
+            android:id="@+id/buttonSubmit"
             android:layout_width="57dp"
             android:layout_height="57dp"
             android:layout_alignParentEnd="true"
@@ -102,6 +93,7 @@
             android:insetTop="0dp"
             android:insetRight="0dp"
             android:insetBottom="0dp"
+            android:enabled="false"
             app:backgroundTint="#728FCE"
             app:icon="@drawable/ic_navigation"
             app:iconGravity="textTop"
@@ -110,6 +102,4 @@
             app:shapeAppearanceOverlay="@style/roundedButton"
             app:tint="#CEB172" />
     </RelativeLayout>
-
-
 </LinearLayout>

@@ -4,8 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Model implements Parcelable {
-    private String title, description, deadline;
-    private boolean checkbox;
+    final private String title, description, deadline;
+    final private boolean checkbox;
 
     public Model(String title, String description, String deadline, boolean checkbox) {
         this.title = title;
@@ -20,18 +20,6 @@ public class Model implements Parcelable {
         deadline = in.readString();
         checkbox = in.readByte() != 0;
     }
-
-    public static final Creator<Model> CREATOR = new Creator<Model>() {
-        @Override
-        public Model createFromParcel(Parcel in) {
-            return new Model(in);
-        }
-
-        @Override
-        public Model[] newArray(int size) {
-            return new Model[size];
-        }
-    };
 
     public String getTitle() {
         return title;
@@ -53,6 +41,18 @@ public class Model implements Parcelable {
     public int describeContents() {
         return 0;
     }
+
+    public static final Creator<Model> CREATOR = new Creator<Model>() {
+        @Override
+        public Model createFromParcel(Parcel in) {
+            return new Model(in);
+        }
+
+        @Override
+        public Model[] newArray(int size) {
+            return new Model[size];
+        }
+    };
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {

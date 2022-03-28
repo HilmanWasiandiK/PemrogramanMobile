@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 public class ProfileFragment extends Fragment {
     TextView textView;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
