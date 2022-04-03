@@ -7,6 +7,13 @@
     android:id="@+id/layoutHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/imbuttonDeleteAll"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|right"
+        android:background="@null"
+        android:src="@drawable/ic_more_option" />
     <TextView
         android:id="@+id/textHello"
         android:layout_width="wrap_content"
@@ -26,7 +33,6 @@
         android:layout_marginStart="135dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="45dp"
-        android:text="Adolfo"
         android:textSize="30dp"
         android:fontFamily="serif"/>
     <androidx.recyclerview.widget.RecyclerView
@@ -36,8 +42,9 @@
         android:layout_marginTop="120dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/cardview_data_task" />
+        android:paddingBottom="50dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/cardview_data_task"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddNewTask"
         android:layout_width="wrap_content"

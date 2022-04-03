@@ -3,9 +3,31 @@ package com.example.listofduty;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "tasks_entity")
 public class Model implements Parcelable {
-    final private String title, description, deadline;
-    final private boolean checkbox;
+    @ColumnInfo(name = "task_id")
+    @PrimaryKey(autoGenerate = true)
+    private long id;
+
+    @ColumnInfo(name = "task_title")
+    @NonNull
+    final private String title;
+
+    @ColumnInfo(name = "task_description")
+    final private String description;
+
+    @ColumnInfo(name = "task_deadline")
+    final private String deadline;
+
+    @ColumnInfo(name = "task_checkbox")
+    @NonNull
+    private boolean checkbox;
 
     public Model(String title, String description, String deadline, boolean checkbox) {
         this.title = title;
@@ -21,16 +43,28 @@ public class Model implements Parcelable {
         checkbox = in.readByte() != 0;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
+
     public String getTitle() {
         return title;
     }
 
     public String getDescription() {
-        return title;
+        return description;
     }
 
     public String getDeadline() {
         return deadline;
+    }
+
+    public void setCheckbox(boolean checkbox){
+        this.checkbox = checkbox;
     }
 
     public boolean isCheckbox() {

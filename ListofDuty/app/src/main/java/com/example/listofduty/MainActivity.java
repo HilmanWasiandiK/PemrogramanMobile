@@ -2,7 +2,12 @@ package com.example.listofduty;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+
 import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,14 +20,17 @@ public class MainActivity extends AppCompatActivity {
 
         botnav_Main = findViewById(R.id.botnavMain);
         botnav_Main.setItemIconTintList(null);
+        TextView showName = findViewById(R.id.textName);
+        
 
-        openFragment(new HomeFragment());
+
+        openFragment(HomeFragment.newInstance("aduy"));
         botnav_Main.setOnItemSelectedListener(item -> {
             if(item.getItemId()==R.id.itemHome) {
-                openFragment(new HomeFragment());
+                openFragment(HomeFragment.newInstance("a"));
                 item.setChecked(true);
             } else if(item.getItemId()==R.id.itemProfile) {
-                openFragment(new ProfileFragment());
+                openFragment(ProfileFragment.newInstance("a"));
                 item.setChecked(true);
             }
             return false;

@@ -13,11 +13,9 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.button.MaterialButton;
-
-import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class BottomSheetDialog extends BottomSheetDialogFragment {
@@ -40,17 +38,19 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
         text_Title.addTextChangedListener(addTaskTextWatcher);
 
         button_DatePicker.setOnClickListener(view -> {
-            Calendar calendar = Calendar.getInstance();
-            int year = calendar.get(Calendar.YEAR);
-            int month = calendar.get(Calendar.MONTH);
-            int day = calendar.get(Calendar.DAY_OF_MONTH);
-            DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), (datePicker, year1, month1, day1) -> {
-                Calendar calendar1 = Calendar.getInstance();
-                calendar1.set(Calendar.YEAR, year1);
-                calendar1.set(Calendar.MONTH, month1);
-                calendar1.set(Calendar.DAY_OF_MONTH, day1);
-                String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(calendar1.getTime());
+            Calendar getCalendar = Calendar.getInstance();
+            int year = getCalendar.get(Calendar.YEAR);
+            int month = getCalendar.get(Calendar.MONTH);
+            int day = getCalendar.get(Calendar.DAY_OF_MONTH);
 
+            DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), (datePicker, year1, month1, day1) -> {
+                Calendar setCalendar = Calendar.getInstance();
+                setCalendar.set(Calendar.YEAR, year1);
+                setCalendar.set(Calendar.MONTH, month1);
+                setCalendar.set(Calendar.DAY_OF_MONTH, day1);
+
+                SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy, EEEE");
+                String currentDateString = format.format(setCalendar.getTime());
                 text_DatePicked.setText(currentDateString);
             }, year, month, day);
             datePickerDialog.show();
@@ -63,9 +63,8 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
             bundle.putParcelable("setDataTask",model);
             getParentFragmentManager().setFragmentResult("getDataTask",bundle);
 
-            HomeFragment homeFragment = new HomeFragment();
-            getParentFragmentManager().beginTransaction().add(homeFragment,"home").commit();
             dismiss();
+            Toast.makeText(getActivity().getApplicationContext(), "New Task Added!", Toast.LENGTH_SHORT).show();
         });
         return v;
     }

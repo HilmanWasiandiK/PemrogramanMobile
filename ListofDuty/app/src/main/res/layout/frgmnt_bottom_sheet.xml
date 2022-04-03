@@ -18,7 +18,7 @@
         android:maxLength="100"
         android:singleLine="true"
         android:scrollHorizontally="true"
-        android:hint="Masukkan Tugas Baru Disini (wajib)"
+        android:hint="Insert New Task Here! (required)"
         android:padding="10dp"
         android:background="@drawable/background_textholder"
         android:inputType="text" />
@@ -42,7 +42,7 @@
                 android:fadeScrollbars="false"
                 android:maxLength="500"
                 android:textSize="20dp"
-                android:hint="Deskripsi (opsional)"
+                android:hint="Task Description (optional)"
                 android:layout_marginTop="5dp"
                 android:padding="10dp"
                 android:inputType="textMultiLine"
