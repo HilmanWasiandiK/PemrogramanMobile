@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ListofDuty">
         <activity
+            android:name=".EditTaskActivity"
+            android:exported="false" />
+        <activity
             android:name=".TaskDetailActivity"
             android:exported="false" />
         <activity

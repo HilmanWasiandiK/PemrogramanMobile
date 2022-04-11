@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/popupMarkAsDone"
+        android:title="Delete All Task"/>
+    <item android:id="@+id/popupEditTask"
+        android:title="Delete Done Task"/>
+</menu>

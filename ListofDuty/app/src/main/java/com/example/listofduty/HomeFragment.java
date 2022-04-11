@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment {
                 Model model = bundle.getParcelable("setDataTask");
 
 //                models.add(new Model(model.getTitle(),model.getDescription(), model.getDeadline(), model.isCheckbox()));
+//                adapter.notifyDataSetChanged();
                 viewModel.addTask(model);
             });
         });

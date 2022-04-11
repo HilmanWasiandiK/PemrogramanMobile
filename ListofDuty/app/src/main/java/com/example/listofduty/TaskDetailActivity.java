@@ -1,12 +1,15 @@
 package com.example.listofduty;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -14,7 +17,6 @@ import java.util.Locale;
 
 public class TaskDetailActivity extends AppCompatActivity {
     TextView text_ShowTitle, text_ShowDeadline, text_ShowStatus, text_ShowDescription;
-    Date date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +37,18 @@ public class TaskDetailActivity extends AppCompatActivity {
             text_ShowDeadline.setText(model.getDeadline());
         }
 
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy, EEEE");
+        String dlDate = model.getDeadline();
+        String curDate = format.format(new Date());
         if(model.isCheckbox()) {
-            text_ShowStatus.setText("Done");
+            text_ShowStatus.setText("Completed");
+            text_ShowStatus.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.greenStat));
+        } else if((!model.isCheckbox()) && (dlDate.isEmpty()) || (curDate.compareTo(dlDate)<0)) {
+            text_ShowStatus.setText("In Progress");
+            text_ShowStatus.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.yellowStat));
         } else {
-            text_ShowStatus.setText("Not Yet Done");
+            text_ShowStatus.setText("Overdue");
+            text_ShowStatus.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.redStat));
         }
 
         if (model.getDescription().equals("")) {

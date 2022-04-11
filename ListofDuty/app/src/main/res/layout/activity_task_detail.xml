@@ -76,12 +76,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="17dp"
+            android:textStyle="bold"
             android:gravity="center_vertical"
             android:paddingStart="20dp"
             android:paddingTop="15dp"
             android:paddingBottom="0dp"
-            android:paddingEnd="0dp"
-            android:textColor="#B31B1B"/>
+            android:paddingEnd="0dp"/>
     </LinearLayout>
     <TextView
         android:id="@+id/textShowDescriptionTask"

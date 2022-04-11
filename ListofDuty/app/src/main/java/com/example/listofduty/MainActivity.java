@@ -21,16 +21,14 @@ public class MainActivity extends AppCompatActivity {
         botnav_Main = findViewById(R.id.botnavMain);
         botnav_Main.setItemIconTintList(null);
         TextView showName = findViewById(R.id.textName);
-        
 
-
-        openFragment(HomeFragment.newInstance("aduy"));
+        openFragment(HomeFragment.newInstance("Adolfo"));
         botnav_Main.setOnItemSelectedListener(item -> {
             if(item.getItemId()==R.id.itemHome) {
-                openFragment(HomeFragment.newInstance("a"));
+                openFragment(HomeFragment.newInstance("Adolfo"));
                 item.setChecked(true);
             } else if(item.getItemId()==R.id.itemProfile) {
-                openFragment(ProfileFragment.newInstance("a"));
+                openFragment(ProfileFragment.newInstance("Adolfo"));
                 item.setChecked(true);
             }
             return false;

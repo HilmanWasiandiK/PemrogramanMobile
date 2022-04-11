@@ -74,12 +74,12 @@
                 android:layout_height="40dp"
                 android:layout_gravity="end|center"
                 android:layout_toStartOf="@+id/buttonSubmit"
-                android:backgroundTint="#CEB172"
+                android:backgroundTint="#FFFFFF"
                 android:text="Set Deadline"
-                android:textColor="#CE8372"
+                android:textColor="#728FCE"
                 android:textSize="11dp"
                 android:textStyle="bold"
-                app:backgroundTint="#CEB172" />
+                app:backgroundTint="#FFFFFF"/>
         </LinearLayout>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSubmit"
@@ -95,11 +95,9 @@
             android:insetBottom="0dp"
             android:enabled="false"
             app:backgroundTint="#728FCE"
-            app:icon="@drawable/ic_navigation"
+            app:icon="@drawable/slct_navigation"
             app:iconGravity="textTop"
             app:iconSize="40dp"
-            app:iconTint="#CEB172"
-            app:shapeAppearanceOverlay="@style/roundedButton"
-            app:tint="#CEB172" />
+            app:shapeAppearanceOverlay="@style/roundedButton" />
     </RelativeLayout>
 </LinearLayout>
