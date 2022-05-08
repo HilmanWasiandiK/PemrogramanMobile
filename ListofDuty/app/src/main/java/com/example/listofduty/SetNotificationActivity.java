@@ -45,7 +45,7 @@ public class SetNotificationActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         editor = sharedPreferences.edit();
         mScheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
-        dateFormat = new SimpleDateFormat("HH : mm");
+        dateFormat = new SimpleDateFormat("HH : mm : ss");
         tcCurrentTime = findViewById(R.id.currentTime);
         tvTargetTime = findViewById(R.id.targetTime);
         button1 = findViewById(R.id.selectTimeButton);
@@ -53,7 +53,7 @@ public class SetNotificationActivity extends AppCompatActivity {
         button3 = findViewById(R.id.stopButton);
 
         //set tampilan awal ketika membuka halaman
-        tvTargetTime.setText(sharedPreferences.getString(TEXT, "-- : --"));
+        tvTargetTime.setText(sharedPreferences.getString(TEXT, "-- : -- : --"));
         if (!isScheduledJob()) {
             button1.setBackgroundColor(button1.getContext().getResources().getColor(R.color.blueOn));
             button2.setBackgroundColor(button2.getContext().getResources().getColor(R.color.greenOn));
@@ -126,7 +126,7 @@ public class SetNotificationActivity extends AppCompatActivity {
                 .setTitleText("SET SCHEDULED TIME FOR DAILY NOTIFICATION")
                 .build();
         materialTimePicker.show(getSupportFragmentManager(), "daily_notification");
-        
+
         materialTimePicker.addOnPositiveButtonClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,7 +139,7 @@ public class SetNotificationActivity extends AppCompatActivity {
                 pickedTime.set(Calendar.SECOND, 0);
                 pickedTime.set(Calendar.MILLISECOND, 0);
 
-                button1.setText("Picked Time: "+dateFormat.format(pickedTime.getTime()));
+                button1.setText("Picked Time= "+dateFormat.format(pickedTime.getTime()));
             }
         });
     }
@@ -200,7 +200,7 @@ public class SetNotificationActivity extends AppCompatActivity {
     private void cancelJob() {
         mScheduler.cancelAll();
         pickedTime = null;
-        tvTargetTime.setText("-- : --");
+        tvTargetTime.setText("-- : -- : --");
         editor.putString(TEXT, tvTargetTime.getText().toString()).apply();
 
         Log.i("DailyNotificationService", "jobCancelled");

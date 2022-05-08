@@ -42,7 +42,7 @@ public class FirstRunJobService extends JobService {
             //scheduling periodic job
             ComponentName serviceName = new ComponentName(getPackageName(), NotificationJobService.class.getName());
             JobInfo builder1 = new JobInfo.Builder(102, serviceName)
-                    .setPeriodic(15*60*1000L)
+                    .setPeriodic(targetTime.getTimeInMillis()-startTime.getTimeInMillis())
                     .setPersisted(true)
                     .build();
 
