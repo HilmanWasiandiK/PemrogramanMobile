@@ -19,7 +19,23 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
+        android:text="Current Time"
+        android:textAlignment="center"
+        android:textSize="23dp"/>
+
+    <TextClock
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentTime"
+        android:format24Hour="HH : mm : ss"
+        android:textAlignment="center"
+        android:textColor="@color/blueOff"
+        android:textSize="46dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Scheduled Time"
         android:textAlignment="center"
         android:textSize="23dp"/>
@@ -27,8 +43,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/selectedTime"
+        android:id="@+id/targetTime"
         android:textAlignment="center"
+        android:textColor="@color/blueOff"
         android:textSize="46dp"/>
 
     <Button
