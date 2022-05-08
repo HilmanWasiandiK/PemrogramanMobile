@@ -7,7 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="redStat">#FFD1515E</color>
-    <color name="yellowStat">#FFF2AD52</color>
-    <color name="greenStat">#FF5AC47C</color>
+    <color name="blueOn">#FF6383C9</color>
+    <color name="blueOff">#FF9DB1DD</color>
+    <color name="redOn">#FFD1515E</color>
+    <color name="redOff">#FFE18F97</color>
+    <color name="yellowOn">#FFF2AD52</color>
+    <color name="yellowOff">#FFF7D09B</color>
+    <color name="greenOn">#FF5AC47C</color>
+    <color name="greenOff">#FF94D9AA</color>
 </resources>

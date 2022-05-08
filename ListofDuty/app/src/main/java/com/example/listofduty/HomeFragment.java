@@ -1,10 +1,8 @@
 package com.example.listofduty;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -95,6 +93,10 @@ public class HomeFragment extends Fragment {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
+                            case R.id.popupSetNotification:
+                                Intent intent = new Intent(getActivity(), SetNotificationActivity.class);
+                                startActivity(intent);
+                                return true;
                             case R.id.popupDeleteAll:
                                 viewModel.deleteAllTask();
                                 Toast.makeText(getActivity().getApplicationContext(),"All Tasks Deleted!",Toast.LENGTH_SHORT).show();
