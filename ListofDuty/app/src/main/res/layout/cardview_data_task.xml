@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
         <CheckBox
-            android:id="@+id/cboxTask"
+            android:id="@+id/checkboxTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
@@ -23,20 +23,20 @@
             android:minWidth="0dp"
             android:minHeight="0dp" />
         <TextView
-            android:id="@+id/textTitle"
+            android:id="@+id/textviewTitleTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:maxLines="1"
-            android:layout_toRightOf="@+id/cboxTask"
+            android:layout_toRightOf="@+id/checkboxTask"
             android:textSize="22dp" />
         <TextView
-            android:id="@+id/textDeadline"
+            android:id="@+id/textviewDeadlineTask"
             android:layout_marginStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textTitle"
-            android:layout_toRightOf="@+id/cboxTask"
+            android:layout_below="@+id/textviewTitleTask"
+            android:layout_toRightOf="@+id/checkboxTask"
             android:textColor="#B31B1B"
             android:textSize="13dp" />
     </RelativeLayout>

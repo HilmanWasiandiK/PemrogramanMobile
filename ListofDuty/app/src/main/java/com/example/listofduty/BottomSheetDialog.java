@@ -19,15 +19,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class BottomSheetDialog extends BottomSheetDialogFragment {
-    Button button_DatePicker;
-    MaterialButton button_Add;
     TextView text_Title, text_Desc, text_DatePicked;
+    MaterialButton button_Add;
+    Button button_DatePicker;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setStyle(DialogFragment.STYLE_NO_FRAME, R.style.BottomSheetTheme);
-        View v = inflater.inflate(R.layout.frgmnt_bottom_sheet,
-                container, false);
+        View v = inflater.inflate(R.layout.frgmnt_bottom_sheet, container, false);
 
         text_Title = v.findViewById(R.id.edtextTask);
         text_Desc = v.findViewById(R.id.edtextDesc);

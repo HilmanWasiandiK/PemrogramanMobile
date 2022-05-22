@@ -1,63 +1,78 @@
 package com.example.listofduty;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.ImageButton;
-import android.widget.PopupMenu;
-import android.widget.Toast;
-//import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.ItemTouchHelper;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.fragment.app.FragmentResultListener;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.fragment.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.view.LayoutInflater;
+import androidx.lifecycle.Observer;
+import android.widget.ImageButton;
+import android.widget.PopupMenu;
+import android.widget.TextView;
+import android.content.Intent;
+import android.view.ViewGroup;
+import android.view.MenuItem;
+import android.widget.Toast;
 import java.util.ArrayList;
+import android.os.Bundle;
+import android.view.View;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
-    private RecyclerView recview_ListTask;
-    private List<Model> models;
-//    private TextView text_Name;
-    private MyAdapter adapter;
+    private ActivityResultLauncher<Intent> resultLauncher;
+    private SharedPreferences sharedpreferences_Username;
     private FloatingActionButton fab_AddNewTask;
+    private RecyclerView recyclerview_TaskList;
+    private ImageButton imagebutton_PopupMenu;
+    private TextView textview_Username;
     private MyViewModel viewModel;
-    private ImageButton imbutton_DeleteAll;
-    private CheckBox cbox_Task;
+    private List<Model> models;
+    private MyAdapter adapter;
 
+    public static final String SHARED_USERNAME = "SharedUsername";
+    public static final String TEXT = "There!";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.frgmnt_home, container, false);
 
-        recview_ListTask = view.findViewById(R.id.recviewListTask);
+        sharedpreferences_Username = this.getActivity().getSharedPreferences(SHARED_USERNAME, Context.MODE_PRIVATE);
+        imagebutton_PopupMenu = view.findViewById(R.id.imagebuttonPopupMenu);
+        recyclerview_TaskList = view.findViewById(R.id.recyclerviewTaskList);
+        textview_Username = view.findViewById(R.id.textviewUsername);
         fab_AddNewTask =  view.findViewById(R.id.fabAddNewTask);
-        imbutton_DeleteAll = view.findViewById(R.id.imbuttonDeleteAll);
-        cbox_Task = view.findViewById(R.id.cboxTask);
         models = new ArrayList<>();
 
-        fab_AddNewTask.setOnClickListener(view1 -> {
-            BottomSheetDialog bottomSheet = new BottomSheetDialog();
-            bottomSheet.show(getParentFragmentManager(), "modalBottomSheet");
+        textview_Username.setText(sharedpreferences_Username.getString(TEXT, "There!")+"!");
+        fab_AddNewTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomSheetDialog bottomSheet = new BottomSheetDialog();
+                bottomSheet.show(getParentFragmentManager(), "modalBottomSheet");
 
-            getParentFragmentManager().setFragmentResultListener("getDataTask", this, (requestKey, bundle) -> {
-                Model model = bundle.getParcelable("setDataTask");
-
-//                models.add(new Model(model.getTitle(),model.getDescription(), model.getDeadline(), model.isCheckbox()));
-//                adapter.notifyDataSetChanged();
-                viewModel.addTask(model);
-            });
+                getParentFragmentManager().setFragmentResultListener("getDataTask", getViewLifecycleOwner(), new FragmentResultListener() {
+                    @Override
+                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                        Model model = result.getParcelable("setDataTask");
+                        viewModel.addTask(model);
+                    }
+                });
+            }
         });
 
         buildRecyclerView();
@@ -70,8 +85,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,
-                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return false;
@@ -82,13 +96,14 @@ public class HomeFragment extends Fragment {
                 viewModel.deleteTask(adapter.getModelAt(viewHolder.getAdapterPosition()));
                 Toast.makeText(getActivity().getApplicationContext(),"Task Deleted!", Toast.LENGTH_SHORT).show();
             }
-        }).attachToRecyclerView(recview_ListTask);
+        }).attachToRecyclerView(recyclerview_TaskList);
 
-        imbutton_DeleteAll.setOnClickListener(new View.OnClickListener() {
+        imagebutton_PopupMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 PopupMenu popupMenu = new PopupMenu(getActivity().getApplicationContext(), view);
                 popupMenu.getMenuInflater().inflate(R.menu.popup_deleteall_menu, popupMenu.getMenu());
+
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
@@ -113,22 +128,46 @@ public class HomeFragment extends Fragment {
                 popupMenu.show();
             }
         });
+
+        resultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if(result.getResultCode() == -1) {
+                    Intent intent = result.getData();
+
+                    long id = intent.getLongExtra("aja", -1);
+                    Toast.makeText(getContext(), "id"+id, Toast.LENGTH_SHORT).show();
+
+                    if (id == -1) {
+                        Toast.makeText(getContext(), "Note can't be updated", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    if(intent != null) {
+                        Model modelelel = intent.getExtras().getParcelable("apa");
+                        modelelel.setId(id);
+                        viewModel.updateTask(modelelel);
+                    }
+                }
+            }
+        });
         return view;
     }
 
     private void buildRecyclerView() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
         adapter = new MyAdapter(getActivity(),models);
-        recview_ListTask.setLayoutManager(linearLayoutManager);
-        recview_ListTask.setHasFixedSize(true);
-        recview_ListTask.setAdapter(adapter);
+        recyclerview_TaskList.setLayoutManager(linearLayoutManager);
+        recyclerview_TaskList.setHasFixedSize(true);
+        recyclerview_TaskList.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Model model) {
                 Intent intent = new Intent(getActivity(), TaskDetailActivity.class);
+                intent.putExtra("task id", model.getId());
                 intent.putExtra("task details", model);
-                startActivity(intent);
+                resultLauncher.launch(intent);
             }
             @Override
             public void onCboxClick(Model model) {
@@ -141,14 +180,7 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-
-    public static HomeFragment newInstance(String someString) {
-        HomeFragment homeFragment = new HomeFragment();
-
-        Bundle bundle = new Bundle();
-        bundle.putString("getOwnerName", someString);
-        homeFragment.setArguments(bundle);
-
-        return homeFragment;
-    }
 }
+
+//                models.add(new Model(model.getTitle(),model.getDescription(), model.getDeadline(), model.isCheckbox()));
+//                adapter.notifyDataSetChanged();

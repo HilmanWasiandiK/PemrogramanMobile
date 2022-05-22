@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="300dp"
+
+    android:background="#E4E4E4">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHANGE USERNAME"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/edittextChangeUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:textAlignment="center"
+        android:maxLength="7"
+        android:maxLines="1"
+        android:inputType="text"
+        android:hint="Type Here! (max 7 chars)"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="right|center_vertical">
+
+        <Button
+            android:id="@+id/buttonCancelChangeUsername"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:background="@color/redOn" />
+        <Button
+            android:id="@+id/buttonSaveChangeUsername"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:background="@color/greenOn" />
+
+    </LinearLayout>
+</LinearLayout>

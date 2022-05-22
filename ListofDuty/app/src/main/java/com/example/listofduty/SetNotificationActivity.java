@@ -24,26 +24,24 @@ import java.util.Date;
 import java.util.List;
 
 public class SetNotificationActivity extends AppCompatActivity {
+    private SharedPreferences sharedpreferences_NotificationTime;
     private Calendar currentTime, pickedTime, targetTime;
     private MaterialTimePicker materialTimePicker;
-    private SharedPreferences sharedPreferences;
     private Button button1, button2, button3;
-    private SharedPreferences.Editor editor;
     private JobScheduler mScheduler;
     private TextClock tcCurrentTime;
     private TextView tvTargetTime;
     private DateFormat dateFormat;
 
-    public static final String SHARED_PREFS = "SharedPrefs";
-    public static final String TEXT = "text";
+    public static final String SHARED_NOTIFICATiON_TIME = "SharedNotificationTime";
+    public static final String TEXT = "-- : -- : --";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_notification);
 
-        sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        editor = sharedPreferences.edit();
+        sharedpreferences_NotificationTime = getSharedPreferences(SHARED_NOTIFICATiON_TIME, MODE_PRIVATE);
         mScheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
         dateFormat = new SimpleDateFormat("HH : mm : ss");
         tcCurrentTime = findViewById(R.id.currentTime);
@@ -53,7 +51,7 @@ public class SetNotificationActivity extends AppCompatActivity {
         button3 = findViewById(R.id.stopButton);
 
         //set tampilan awal ketika membuka halaman
-        tvTargetTime.setText(sharedPreferences.getString(TEXT, "-- : -- : --"));
+        tvTargetTime.setText(sharedpreferences_NotificationTime.getString(TEXT, "-- : -- : --"));
         if (!isScheduledJob()) {
             button1.setBackgroundColor(button1.getContext().getResources().getColor(R.color.blueOn));
             button2.setBackgroundColor(button2.getContext().getResources().getColor(R.color.greenOn));
@@ -171,7 +169,7 @@ public class SetNotificationActivity extends AppCompatActivity {
             targetTime.set(Calendar.MILLISECOND, 0);
         }
         tvTargetTime.setText(dateFormat.format(targetTime.getTime()));
-        editor.putString(TEXT, tvTargetTime.getText().toString()).apply();
+        sharedpreferences_NotificationTime.edit().putString(TEXT, tvTargetTime.getText().toString()).apply();
 
         //jika waktu yang dipilih pada material time picker kurang dari sama dengan waktu terkini,
         //maka waktu ditambah 1 hari (24 jam)
@@ -201,7 +199,7 @@ public class SetNotificationActivity extends AppCompatActivity {
         mScheduler.cancelAll();
         pickedTime = null;
         tvTargetTime.setText("-- : -- : --");
-        editor.putString(TEXT, tvTargetTime.getText().toString()).apply();
+        sharedpreferences_NotificationTime.edit().putString(TEXT, tvTargetTime.getText().toString()).apply();
 
         Log.i("DailyNotificationService", "jobCancelled");
     }

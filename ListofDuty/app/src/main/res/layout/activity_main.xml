@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/botnavMain"
+        android:id="@+id/bottomnavigationMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

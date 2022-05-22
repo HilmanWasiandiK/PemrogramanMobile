@@ -62,9 +62,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyHolder> {
         public MyHolder(@NonNull View itemView, final MyAdapter.OnItemClickListener onItemClickListener) {
             super(itemView);
 
-            this.mTitle = itemView.findViewById(R.id.textTitle);
-            this.mDeadline = itemView.findViewById(R.id.textDeadline);
-            this.mCheck = itemView.findViewById(R.id.cboxTask);
+            this.mTitle = itemView.findViewById(R.id.textviewTitleTask);
+            this.mDeadline = itemView.findViewById(R.id.textviewDeadlineTask);
+            this.mCheck = itemView.findViewById(R.id.checkboxTask);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
