@@ -103,10 +103,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void postRegister() {
-//        RegisterLoginRequest request = new RegisterLoginRequest("eve.holt@reqres.in", "pistol");
-//        Call<RegisterResponse> call = jsonPlaceHolderApi.postSuccessRegister(request);
-        RegisterLoginRequest request = new RegisterLoginRequest("eve.holt@reqres.in");
-        Call<RegisterResponse> call = jsonPlaceHolderApi.postUnSuccessRegister(request);
+//        RegisterLoginRequest request = new RegisterLoginRequest("eve.holt@reqres.in");
+//        Call<RegisterResponse> call = jsonPlaceHolderApi.postUnSuccessRegister(request);
+        RegisterLoginRequest request = new RegisterLoginRequest("eve.holt@reqres.in", "pistol");
+        Call<RegisterResponse> call = jsonPlaceHolderApi.postSuccessRegister(request);
+
         call.enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {

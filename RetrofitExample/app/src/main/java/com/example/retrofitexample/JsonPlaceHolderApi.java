@@ -45,9 +45,11 @@ public interface JsonPlaceHolderApi {
     @GET
     Call<List<Comment>> getComment(@Url String url);
 
+    //mengirim data berupa class model request
     @POST("posts")
     Call<Post>createPost(@Body Post post);
 
+    //mengirim data berupa field/kolom
     @FormUrlEncoded
     @POST("posts")
     Call<Post> createPost(
@@ -56,6 +58,7 @@ public interface JsonPlaceHolderApi {
             @Field("body") String text
     );
 
+    //mengirim data berupa field/kolom yand ditampung variabel bertipe map
     @FormUrlEncoded
     @POST("posts")
     Call<Post> createPost(@FieldMap Map<String, String> fields);
