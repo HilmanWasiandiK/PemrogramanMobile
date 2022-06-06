@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         //------------------------------------------------------------------------------
         //latihan YT
-        getposts();
+//        getposts();
 //        getComment();
 //        createPost();
 //        updatePost();
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         //------------------------------------------------------------------------------
         //latihan otodidak
 //        getAllPosts();
-//        getAPostByPath();
+        getAPostByPath();
 //        getAPostByQuery();
 //        getAPostByMap();
 //        getAPostByUrl();

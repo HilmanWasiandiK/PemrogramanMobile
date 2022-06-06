@@ -2,6 +2,7 @@ package com.example.listofduty;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,6 +73,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyHolder> {
                     if(onItemClickListener != null) {
                         if(getAdapterPosition() != RecyclerView.NO_POSITION) {
                             onItemClickListener.onItemClick(models.get(getAdapterPosition()));
+                            Log.i("TimeKeeper", "TimeDifference :"+(models.get(getAdapterPosition())));
                         }
                     }
                 }
