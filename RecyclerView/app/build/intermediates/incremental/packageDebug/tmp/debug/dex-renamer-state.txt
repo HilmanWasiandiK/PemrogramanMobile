@@ -1,0 +1,4 @@
+#Mon Jun 06 21:36:10 ICT 2022
+base.0=C\:\\Users\\as\\Documents\\Semester 4\\AndroStudRepository - Semester 4\\RecyclerView\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

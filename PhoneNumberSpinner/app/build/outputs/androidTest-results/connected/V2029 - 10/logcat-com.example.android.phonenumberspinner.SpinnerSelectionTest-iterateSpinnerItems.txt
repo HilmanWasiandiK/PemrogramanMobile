@@ -1,0 +1,114 @@
+06-06 20:45:13.280 10957 10993 I TestRunner: started: iterateSpinnerItems(com.example.android.phonenumberspinner.SpinnerSelectionTest)
+06-06 20:45:13.284 10957 10957 I MonitoringInstr: Activities that are still in CREATED to STOPPED: 0
+06-06 20:45:13.285 10957 10993 W ActivityTestRule: getActivityIntent() returned null using default: Intent(Intent.ACTION_MAIN)
+06-06 20:45:13.286 10957 10993 I ActivityTestRule: Launching activity: ComponentInfo{com.example.android.phonenumberspinner/com.example.android.phonenumberspinner.MainActivity}
+06-06 20:45:13.288 10957 10995 D MonitoringInstr: execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle
+06-06 20:45:13.359 10957 10957 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@f224a8a
+06-06 20:45:13.491 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@c9729d7 in: PRE_ON_CREATE
+06-06 20:45:13.547 15385 10510 I MediaCodec: OMX.qcom.video.decoder.avc, mInputBufferCount = 23 fps, mOutputBufferCount = 25 fps, mRenderFrameCount = 24 fps, mReleaseFrameCount = 0 fps
+06-06 20:45:13.633 10957 10957 W nenumberspinne: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (greylist, reflection, allowed)
+06-06 20:45:13.635 10957 10957 W nenumberspinne: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (greylist, reflection, allowed)
+06-06 20:45:13.730 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@c9729d7 in: CREATED
+06-06 20:45:13.735 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@c9729d7 in: STARTED
+06-06 20:45:13.738 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@c9729d7 in: RESUMED
+06-06 20:45:13.763 15260 15260 E cr_CompositorSurfaceMgr: surfaceDestroyed format : -3
+06-06 20:45:13.772 15260 15329 D AAudio  : AAudioStream_requestStop(s#8) called
+06-06 20:45:13.772 15260 15329 D AudioTrack: stop(2931): called with 625664 frames delivered
+06-06 20:45:13.773 15260 15329 D         : PlayerBase::stop() from IPlayer
+06-06 20:45:13.777 24765 24765 D AudioManager: dispatching onPlaybackConfigChanged()
+06-06 20:45:13.802 15385  5996 W cr_MediaCodecBridge: Releasing: OMX.qcom.video.decoder.avc
+06-06 20:45:13.833 15385 10510 D SurfaceUtils: disconnecting from surface 0x753bc2c010, reason disconnectFromSurface
+06-06 20:45:13.841 15385  5996 W cr_MediaCodecBridge: Codec released
+06-06 20:45:13.857 15260 15260 D PlaybackState: setState position:1367347
+06-06 20:45:13.857 15260 15260 D PlaybackState: setActiveQueueItemId mActiveItemId:-1
+06-06 20:45:13.857 15260 15260 D MediaSession: setPlaybackState start
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: QUALCOMM build                   : deeb792, Ief2e475f42
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: Build Date                       : 09/08/20
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: EV031.29.00.13
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: Local Branch                     :
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.UM.8.15.R1.10.00.00.643.053
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: Remote Branch                    : NONE
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: Reconstruct Branch               : NOTHING
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: Build Config                     : S P 8.0.16 AArch64
+06-06 20:45:13.885 10957 11002 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+06-06 20:45:13.906 10957 11002 I AdrenoGLES-0: PFP: 0x016ee188, ME: 0x00000000
+06-06 20:45:14.025  1593  1901 I ActivityTaskManager: Displayed com.example.android.phonenumberspinner/.MainActivity: +734ms
+06-06 20:45:14.085  7288  7288 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3204
+06-06 20:45:14.086  7288  7288 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2100 checkRepeatedly = false, unlocked = true
+06-06 20:45:14.086  7288  7288 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1903 onStartInput(EditorInfo{inputType=0x3(Phone) imeOptions=0x6 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.android.phonenumberspinner fieldId=2131296316 fieldName=null extras=null}, false)
+06-06 20:45:14.087  7288  7288 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2100 checkRepeatedly = true, unlocked = true
+06-06 20:45:14.087 10957 10957 I AssistStructure: Flattened final assist data: 2248 bytes, containing 1 windows, 11 views
+06-06 20:45:14.114   712   712 W pkh     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+06-06 20:45:14.272 10957 10993 D InputManagerEventInjectionStrategy: Creating injection strategy with input manager.
+06-06 20:45:14.273 10957 10993 W nenumberspinne: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (greylist, reflection, allowed)
+06-06 20:45:14.273 10957 10993 W nenumberspinne: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (greylist, reflection, allowed)
+06-06 20:45:14.273 10957 10993 W nenumberspinne: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (greylist, reflection, allowed)
+06-06 20:45:14.273 10957 10993 W nenumberspinne: Accessing hidden method Landroid/view/InputEvent;->getSequenceNumber()I (greylist, reflection, allowed)
+06-06 20:45:14.283 15260 15260 I cr_tabmodel: Appending tabs being restored to metadata lists, 0, startingNormalCount: 32, startingIncognitoCount: 0
+06-06 20:45:14.283 15260 15260 I cr_tabmodel: Serializing tab lists; counts: 32, 0
+06-06 20:45:14.289 10957 10957 W nenumberspinne: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (greylist, reflection, allowed)
+06-06 20:45:14.289 10957 10957 W nenumberspinne: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (greylist, reflection, allowed)
+06-06 20:45:14.289 10957 10957 W nenumberspinne: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (greylist, reflection, allowed)
+06-06 20:45:14.293 10957 10993 W nenumberspinne: Accessing hidden method Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe; (greylist,core-platform-api, linking, allowed)
+06-06 20:45:14.293 10957 10993 W nenumberspinne: Accessing hidden method Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J (greylist,core-platform-api, linking, allowed)
+06-06 20:45:14.293 10957 10993 W nenumberspinne: Accessing hidden method Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V (greylist, linking, allowed)
+06-06 20:45:14.294 10957 10957 W nenumberspinne: Accessing hidden method Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal; (greylist, reflection, allowed)
+06-06 20:45:14.295 10957 10957 W nenumberspinne: Accessing hidden field Landroid/view/WindowManagerGlobal;->mViews:Ljava/util/ArrayList; (greylist, reflection, allowed)
+06-06 20:45:14.295 10957 10957 W nenumberspinne: Accessing hidden field Landroid/view/WindowManagerGlobal;->mParams:Ljava/util/ArrayList; (greylist, reflection, allowed)
+06-06 20:45:14.299 10957 11019 W nenumberspinne: Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+06-06 20:45:14.300 10957 11019 W nenumberspinne: Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+06-06 20:45:14.304 10957 10957 I ViewInteraction: Performing 'scroll to' action on view with id: com.example.android.phonenumberspinner:id/label_spinner
+06-06 20:45:14.314   712  9744 W pct     : Infinite Data has no result for com.example.android.phonenumberspinner [CONTEXT service_id=177 ]
+06-06 20:45:14.323   712 10357 W pct     : Infinite Data has no result for com.example.android.phonenumberspinner [CONTEXT service_id=177 ]
+06-06 20:45:14.332 15260  9131 I cr_OPArchivePublisher: ADM threw while trying to remove a download. java.lang.IllegalArgumentException: input param 'ids' can't be null
+06-06 20:45:14.343   712 11020 I odn     : Detector ignoring field with types: [8] [CONTEXT service_id=177 ]
+06-06 20:45:14.375 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@c9729d7 in: PAUSED
+06-06 20:45:14.416 10957 10993 I TestRunner: failed: iterateSpinnerItems(com.example.android.phonenumberspinner.SpinnerSelectionTest)
+06-06 20:45:14.416 10957 10993 I TestRunner: ----- begin exception -----
+06-06 20:45:14.418 10957 10993 I TestRunner: android.support.test.espresso.PerformException: Error performing 'scroll to' on view 'Animations or transitions are enabled on the target device.
+06-06 20:45:14.418 10957 10993 I TestRunner: For more info check: http://goo.gl/qVu1yV
+06-06 20:45:14.418 10957 10993 I TestRunner:
+06-06 20:45:14.418 10957 10993 I TestRunner: with id: com.example.android.phonenumberspinner:id/label_spinner'.
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.espresso.PerformException$Builder.build(PerformException.java:84)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:81)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:52)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:312)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:167)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.espresso.ViewInteraction.perform(ViewInteraction.java:110)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at com.example.android.phonenumberspinner.SpinnerSelectionTest.iterateSpinnerItems(SpinnerSelectionTest.java:57)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:433)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:375)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2243)
+06-06 20:45:14.418 10957 10993 I TestRunner: Caused by: java.lang.RuntimeException: Action will not be performed because the target view does not match one or more of the following constraints:
+06-06 20:45:14.418 10957 10993 I TestRunner: (view has effective visibility=VISIBLE and is descendant of a: (is assignable from class: class android.widget.ScrollView or is assignable from class: class android.widget.HorizontalScrollView or is assignable from class: class android.widget.ListView))
+06-06 20:45:14.418 10957 10993 I TestRunner: Target view: "AppCompatSpinner{id=2131296340, res-name=label_spinner, visibility=VISIBLE, width=234, height=48, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.support.constraint.ConstraintLayout$LayoutParams@219d5dd, tag=null, root-is-layout-requested=false, has-input-connection=false, x=534.0, y=48.0, child-count=1}"
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:238)
+06-06 20:45:14.418 10957 10993 I TestRunner: 	at android.support.test.espresso.ViewInteraction.access$100(
+06-06 20:45:14.418 10957 10993 I TestRunner: ----- end exception -----
+06-06 20:45:14.422 10957 10993 I TestRunner: finished: iterateSpinnerItems(com.example.android.phonenumberspinner.SpinnerSelectionTest)

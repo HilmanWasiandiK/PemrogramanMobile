@@ -1,0 +1,38 @@
+06-06 20:45:15.068 10957 10993 I TestRunner: started: useAppContext(com.example.android.phonenumberspinner.SpinnerSelectionTest)
+06-06 20:45:15.075 15260 15260 D PlaybackState: setState position:1367367
+06-06 20:45:15.075 15260 15260 D PlaybackState: setActiveQueueItemId mActiveItemId:-1
+06-06 20:45:15.075 15260 15260 D MediaSession: setPlaybackState start
+06-06 20:45:15.098 10957 10957 I MonitoringInstr: Activities that are still in CREATED to STOPPED: 0
+06-06 20:45:15.119 10957 10993 W ActivityTestRule: getActivityIntent() returned null using default: Intent(Intent.ACTION_MAIN)
+06-06 20:45:15.120 10957 10993 I ActivityTestRule: Launching activity: ComponentInfo{com.example.android.phonenumberspinner/com.example.android.phonenumberspinner.MainActivity}
+06-06 20:45:15.122 10957 11043 D MonitoringInstr: execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle
+06-06 20:45:15.196 10957 10957 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@f46374c
+06-06 20:45:15.242 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@686e395 in: PRE_ON_CREATE
+06-06 20:45:15.400 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@686e395 in: CREATED
+06-06 20:45:15.405 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@686e395 in: STARTED
+06-06 20:45:15.407 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@686e395 in: RESUMED
+06-06 20:45:15.531  1593  1901 I ActivityTaskManager: Displayed com.example.android.phonenumberspinner/.MainActivity: +404ms
+06-06 20:45:15.556  7288  7288 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3204
+06-06 20:45:15.557  7288  7288 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2100 checkRepeatedly = false, unlocked = true
+06-06 20:45:15.557  7288  7288 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1903 onStartInput(EditorInfo{inputType=0x3(Phone) imeOptions=0x6 privateImeOptions=null actionName=DONE actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=non-empty label=null packageName=com.example.android.phonenumberspinner fieldId=2131296316 fieldName=null extras=null}, false)
+06-06 20:45:15.559  7288  7288 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2100 checkRepeatedly = true, unlocked = true
+06-06 20:45:15.559 10957 10957 I AssistStructure: Flattened final assist data: 2248 bytes, containing 1 windows, 11 views
+06-06 20:45:15.598 15260 15260 E cr_CompositorSurfaceMgr: surfaceDestroyed format : -3
+06-06 20:45:15.601 15260 15329 D AAudio  : AAudioStream_requestStop(s#8) called
+06-06 20:45:15.601 15260 15329 D AudioTrack: stop(2931): called with 46148 frames delivered
+06-06 20:45:15.602 15260 15329 D         : PlayerBase::stop() from IPlayer
+06-06 20:45:15.603 24765 24765 D AudioManager: dispatching onPlaybackConfigChanged()
+06-06 20:45:15.607 15385  5996 W cr_MediaCodecBridge: Releasing: OMX.qcom.video.decoder.avc
+06-06 20:45:15.647   712   712 W pkh     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+06-06 20:45:15.647 15385 11032 D SurfaceUtils: disconnecting from surface 0x74dab70010, reason disconnectFromSurface
+06-06 20:45:15.652 15385  5996 W cr_MediaCodecBridge: Codec released
+06-06 20:45:15.665   712 11020 W pct     : Infinite Data has no result for com.example.android.phonenumberspinner [CONTEXT service_id=177 ]
+06-06 20:45:15.668   712 15452 W pct     : Infinite Data has no result for com.example.android.phonenumberspinner [CONTEXT service_id=177 ]
+06-06 20:45:15.675   712 10357 W pct     : Infinite Data has no result for com.example.android.phonenumberspinner [CONTEXT service_id=177 ]
+06-06 20:45:15.678   712 10357 W pct     : Infinite Data has no result for com.example.android.phonenumberspinner [CONTEXT service_id=177 ]
+06-06 20:45:15.690 15260 15260 D PlaybackState: setState position:1367923
+06-06 20:45:15.690 15260 15260 D PlaybackState: setActiveQueueItemId mActiveItemId:-1
+06-06 20:45:15.690 15260 15260 D MediaSession: setPlaybackState start
+06-06 20:45:15.705   712 10358 I odn     : Detector ignoring field with types: [8] [CONTEXT service_id=177 ]
+06-06 20:45:15.733 10957 10957 D LifecycleMonitor: Lifecycle status change: com.example.android.phonenumberspinner.MainActivity@686e395 in: PAUSED
+06-06 20:45:15.765 10957 10993 I TestRunner: finished: useAppContext(com.example.android.phonenumberspinner.SpinnerSelectionTest)
